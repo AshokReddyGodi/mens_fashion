@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Men's fashion</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+  <style type="text/css">
+    .bs-example {
+      margin: 20px;
+    }
+
+    body {
+      padding-top: 70px;
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+      background-color: grey;
+    }
+
+    .navbar-toggler-icon {
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: middle;
+      content: "";
+      background: no-repeat center center;
+      background-size: 100% 100%;
+      background-color: rgb(126, 119, 119);
+      border-radius: 4px;
+    }
+
+    * {
+      font-family: sans-serif;
+    }
+
+
+    #clr {
+      text-decoration: none;
+      color: rgb(94, 90, 90);
+    }
+
+    #clr:hover {
+      color: rgb(173, 162, 6);
+    }
+
+    .fa-address-book {
+      margin-top: 12px;
+    }
+
+    img {
+      vertical-align: middle;
+      border-style: none;
+      padding-top: -32px;
+    }
+
+    p#count {
+      margin-top: -51px;
+    }
+
+    .fa,
+    .fas {
+      font-weight: 900;
+      padding-top: 10px;
+      color: grey
+    }
+
+    .fa-address-book {
+      margin-top: 0px;
+    }
+
+
+    [type=button],
+    [type=reset],
+    [type=submit],
+    button {
+      -webkit-appearance: button;
+      background-color: transparent;
+      border: none;
+      margin-top: -23px;
+    }
+
+    h3 {
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: transparent;
+      border-color: lightgrey;
+      border-radius: 20px;
+      color: lightgrey;
+      text-align: center;
+
+    }
+
+    .btn-primary:hover {
+      background-color: rgb(207, 108, 21);
+      color: lightgrey;
+      border-color: rgb(207, 108, 21);
+    }
+
+    .btn-default {
+      background-color: transparent;
+      border-color: rgb(207, 108, 21);
+      border-radius: 20px;
+      color: rgb(207, 108, 21);
+      text-align: center;
+
+    }
+
+    .btn-default:hover {
+      background-color: rgb(207, 108, 21);
+      color: lightgrey;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 30px;
+    }
+
+
+
+
+
+
+
+    .img-box {
+      background-color: rgb(233, 233, 233);
+    }
+
+
+
+
+
+    .align {
+      text-align: left;
+      float: right;
+      margin-right: 120px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .buton {
+      background-color: transparent;
+      border: 1px solid black;
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+      color: rgb(56, 51, 51);
+    }
+
+    .left {
+      text-align: left;
+      float: left;
+    }
+
+    nav-link a:hover {
+      color: rgb(143, 143, 6);
+    }
+
+    .icons {
+      position: fixed;
+      top: 30%;
+      right: 0%;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    .icons a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px;
+      font-size: 22px;
+      font-family: sans-serif;
+
+      text-align: right;
+      transform: translate(0px, 0px);
+      transition: all 0.5s;
+    }
+
+
+    .icons a i {
+      margin-left: 25px;
+      height: 40px;
+      width: 40px;
+      color: black;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+
+    }
+
+    .icons a i.fa-facebook {
+      color: rgb(1, 5, 1);
+    }
+
+    .icons a i.fa-twitter {
+      color: rgb(1, 7, 1);
+    }
+
+    .icons a i.fa-instagram {
+      color: rgb(5, 26, 5);
+    }
+
+    .facebook {
+
+      color: rgb(2, 2, 17);
+    }
+
+    .twitter {
+
+      color: rgb(3, 3, 22);
+    }
+
+    .instagram {
+
+      color: rgb(1, 1, 14);
+    }
+
+
+
+
+
+
+
+
+
+    .dropdown,
+    .dropleft,
+    .dropright,
+    .dropup {
+      position: relative;
+      padding-top: 7px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 10px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      color: rgb(211, 167, 23);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+ * Basic button style
+ */
+    .btn {
+      box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5) inset;
+      border-radius: 3px;
+      border: 1px solid;
+      display: inline-block;
+      height: 18px;
+      line-height: 18px;
+      padding: 0 8px;
+      position: relative;
+
+      font-size: 12px;
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    /*
+ * Counter button style
+ */
+    .btn-counter {
+      margin-right: 39px;
+    }
+
+    .btn-counter:after,
+    .btn-counter:hover:after {
+      text-shadow: none;
+    }
+
+    .btn-counter:after {
+      border-radius: 3px;
+      border: 1px solid #d3d3d3;
+      background-color: #eee;
+      padding: 0 8px;
+      color: #777;
+      content: attr(data-count);
+      left: 100%;
+      margin-left: 8px;
+      margin-right: -13px;
+      position: absolute;
+      top: -1px;
+    }
+
+    .btn-counter:before {
+      transform: rotate(45deg);
+      filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+
+      background-color: #eee;
+      border: 1px solid #d3d3d3;
+      border-right: 0;
+      border-top: 0;
+      content: '';
+      position: absolute;
+      right: -13px;
+      top: 5px;
+      height: 6px;
+      width: 6px;
+      z-index: 1;
+      zoom: 1;
+    }
+
+    /*
+ * Custom styles
+ */
+    .btn {
+      background-color: #dbdbdb;
+      border-color: #bbb;
+      color: #666;
+    }
+
+    .btn:hover,
+    .btn.active {
+      text-shadow: 0 1px 0 #b12f27;
+      background-color: #f64136;
+      border-color: #b12f27;
+    }
+
+    .btn:active {
+      box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    .btn span {
+      color: #f64136;
+    }
+
+    .btn:hover,
+    .btn:hover span,
+    .btn.active,
+    .btn.active span {
+      color: #eeeeee;
+    }
+
+    .btn:active span {
+      color: #b12f27;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    /* @media (min-width: 1200px) {
+.container {
+    
+    max-width: 1024px;
+}
+} */
+  </style>
+
+
+</head>
+
+<body>
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark bg-white fixed-top">
+      <a href="#" class="navbar-brand"></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="assets/images/fox-shape.png" target="_blank" id="clr">
+            <img src="assets/images/logo2.jfif" alt="Lights" style="width:50%" height="70px">
+            <div class="caption">
+              <p>Giovanni Menswear</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-nav ml-auto">
+          <a href="index.html" class="nav-item nav-link" id="clr">Home</a>
+
+          <div class="dropdown">
+            <a href="store.html" class="dropbtn" class="nav-item nav-link" id="clr">Store</a>
+            <div class="dropdown-content">
+              <a href="shoes.html">Shoes</a>
+              <a href="accessories.html">Accessories</a>
+              <a href="tops.html">Tops</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-item nav-link" id="clr">About</a>
+          <a href="blog.html" class="nav-item nav-link" id="clr">Blog</a>
+          <a href="pointofsale.html" class="nav-item nav-link" id="clr">Points of Sale</a>
+          <a href="members.html" class="nav-item nav-link" id="clr">Members</a>
+          <i class="fas fa-address-book"></i><a href="login.html" class="nav-item nav-link" id="clr">Login</a>
+          <button type="button" data-toggle="modal" data-target="#cart"> <span
+              class="glyphicon glyphicon-shopping-cart"></span><img src="assets/images/cart.png" alt="cart"
+              height="75px" width="55px">
+            <p id="count" class="total-count" style="color:red;font-weight:bold;">0</p>
+          </button>
+        </div>
+
+
+
+        <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
+
+      </div>
+  </div>
+  </nav>
+  </div>
+
+
+  <div class="icons">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+
+  </div>
+
+
+
+
+
+  <div class="jumbotron bg-grey text-center parent" id="parent1">
+
+    <div class="container bg-primary p-3 child" id="child1">
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <p style="color:white;">This blog isn't set up yet. Check back soon.</p>
+        </div>
+
+        <div class="icons">
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container bg-white child" id="child1" id="con" style="margin-top:50px;">
+      <div class="row">
+
+        <div class="col-sm-12">
+          <p style="float:left;padding-top:30px;padding-left:40px;">Jul 10 .
+            1 min </p><a href="index.html"><img src="assets/images/more.png" alt="more"
+              style="float:right;padding-top:30px;padding-right:40px;"></a>
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <h4 style="float:left;padding-top:30px;padding-left:40px;">Hot Menswear Trends for the Following Season</h4>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <p style="float:left;padding-top:30px;padding-left:40px;margin-right:40px;">Create a blog post subtitle that
+            summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</p>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <img src="assets/images/img67.jpeg" alt="img18" height="500px" width="1000px">
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <p class="left" style="padding-left:55px;margin-right:40px;padding-top:30px;">Welcome to your blog post. Use
+            this space to connect with your readers and potential customers in a way that’s current and interesting.
+            Think of it as an ongoing conversation where you can share updates about business, trends, news, and more.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <p class="left" style="padding-left:55px;margin-right:40px;padding-top:30px;">“Do you have a design in mind
+            for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog -
+            there’s a stunning layout for everyone.”</p>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <p class="left" style="padding-left:55px;margin-right:40px;padding-top:30px;">You’ll be posting loads of
+            engaging content, so be sure to keep your blog organized with Categories that also allow visitors to explore
+            more of what interests them.</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <h5 class="left" style="padding-left:55px;margin-right:40px;padding-top:30px;">Create Relevant Content</h5>
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <p class="left" style="padding-left:55px;margin-right:40px;padding-top:30px;">Writing a blog is a great way to
+            position yourself as an authority in your field and captivate your readers’ attention. Do you want to
+            improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your
+            website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach
+            more people, and help visitors search for relevant content. </p>
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <p class="left" style="padding-left:55px;margin-right:40px;padding-top:30px;">Blogging gives your site a
+            voice, so let your business’ personality shine through. Choose a great image to feature in your post or add
+            a video for extra engagement. Are you ready to get started? Simply create a new post now. </p>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <hr style="padding-left:65px;margin-right:40px;padding-top:30px;">
+        </div>
+
+        <div class="col-sm-12">
+          <ul style="float:left;">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+
+          </ul>
+        </div>
+        <div class="col-sm-12">
+          <hr style="padding-left:85px;margin-right:40px;padding-top:60px;">
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <a href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"
+            style="float:right;margin-right:70px;"><span>&#x2764;</span></a>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-12" style="padding-top:40px;">
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <p style="float:left;padding-top:30px;">Recent Posts</p>
+          <a href="blog.html" style="float:right; color:black;padding-top:30px;">See All</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="jumbotron bg-grey text-center parent" id="parent1">
+
+
+
+      <div class="container text-center bg-lightgrey" style="margin-bottom:0"><br>
+
+
+
+        <div class="row">
+          <div class="col-md-4 color" style="text-align: justify" ;>
+            <div class="bg-white  pb-5">
+              <img class="img-responsive" src="assets/images/img13.jpeg" alt="Fjords" height="235px" width="100%">
+              <p style="text-decoration: none;color:black;font-size:14px;margin-left:32px;margin-top:20px;">Jul 10 .
+                1 min <a href="index.html"><img src="assets/images/more.png" alt="more" style="margin-left:180px;"></a>
+              </p>
+
+
+              <a href="" style="text-decoration: none;color:black;font-size:24px;padding-left:38px;">Hot Menswear
+                Trends<br><span style="padding-left:38px;"> for the Following Season</span></a>
+              <hr style="margin-top:30px;margin-left:32px;margin-right:32px;">
+              <a href="" style="text-decoration: none;color:black;font-size:14px;margin-left:32px;">Write a comment<a
+                  href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"
+                  style="margin-left:120px;"><span>&#x2764;</span></a></a>
+
+
+            </div>
+
+
+
+          </div>
+          <div class="col-md-4 color" style="text-align: justify" ;>
+            <div class="bg-white  pb-5">
+
+              <img class="img-responsive" src="assets/images/img13.jpeg" alt="Fjords" height="235px" width="100%">
+              <p style="text-decoration: none;color:black;font-size:14px;margin-left:32px;margin-top:20px;">Jul 10 .
+                2 min<a href="index.html"><img src="assets/images/more.png" alt="more" style="margin-left:180px;"></a>
+              </p>
+              <a href="" style="text-decoration: none;color:black;font-size:24px;padding-left:38px;">Style Essentials
+                Every<br><span style="padding-left:38px;"> Man Needs</span></a>
+              <hr style="margin-top:30px;margin-left:32px;margin-right:32px;">
+              <a href="" style="text-decoration: none;color:black;font-size:14px;margin-left:32px;">Write a comment<a
+                  href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"
+                  style="margin-left:120px;"><span>&#x2764;</span></a></a>
+
+            </div>
+          </div>
+          <div class="col-md-4 color" style="text-align: justify" ;>
+            <div class="bg-white  pb-5">
+
+              <img class="img-responsive" src="assets/images/img23.jpeg" alt="Fjords" height="235px" width="100%">
+              <p style="text-decoration: none;color:black;font-size:14px;margin-left:32px;margin-top:20px;">Jul 10 . 1
+                min<a href="index.html"><img src="assets/images/more.png" alt="more" style="margin-left:180px;"></a></p>
+              <a href="" style="text-decoration: none;color:black;font-size:24px;padding-left:38px;">Finding Jeans That
+                Truly<br><span style="padding-left:38px;"> Fit</span></a>
+              <hr style="margin-top:30px;margin-left:32px;margin-right:32px;">
+              <a href="" style="text-decoration: none;color:black;font-size:14px;margin-left:32px;">Write a comment<a
+                  href="#" title="Love it" class="btn btn-counter multiple-count" data-count="0"
+                  style="margin-left:120px;"><span>&#x2764;</span></a></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="container bg-white p-3 child" id="child1">
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <a href="login.html" style="text-align: center;"><span style="text-decoration: none;color:chocolate;">Log
+              in</span><span style="text-decoration: none;color:black;"> to leave a comment.</span></a>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="jumbotron bg-white text-center">
+
+    <div class="row">
+
+      <div class="col-sm-2">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">Point Of Sale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">Members</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+
+        <p>500 Terry Francois St.</p>
+
+
+        <p>San Francisco, CA 94158</p>
+
+
+        <p>Email : info@my-domain.com</p>
+
+
+        <p>Tel : 1-800-000-0000 </p>
+
+      </div>
+
+
+
+      <div class="col-sm-2">
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;" id="clr">Shipping & Returns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:black;">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <i class="fa fa-facebook-f" style="font-size:16px;color:white;"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-twitter" style="font-size:16px;color:white;"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-instagram" style="font-size:16px;color:white;"></i>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="col-sm-6">
+
+        <ul class="navbar-nav align">
+          <li class="nav-item">
+            <p> Receive all our news and updates</p>
+          </li>
+          <li class="nav-item">
+            <input type="text" class="form-control" placeholder="Email Address*">
+          </li>
+          <li class="nav-item">
+            <button type="button" class="buton">Subscribe Now</button>
+          </li>
+        </ul>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+</body>
+
+</html>
