@@ -13,7 +13,7 @@ function closeNav() {
 // ************************************************
 // Shopping Cart API
 // ************************************************
-
+// add to cart
 var shoppingCart = (function () {
     // =============================
     // Private methods and propeties
